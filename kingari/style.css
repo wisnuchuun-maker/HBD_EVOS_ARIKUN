@@ -1,0 +1,47 @@
+:root{--bg:#2a0f4d;--bg2:#4a1a7a;--gold:#ffc933;--pink:#ff4d8d;--mint:#3ee6b0;--cream:#fff6dc;--ink:#1d0a38;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f0a3b;--bg2:#3a1465}}
+:root[data-theme="dark"]{--bg:#1f0a3b;--bg2:#3a1465}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(circle at 50% 0,var(--bg2),var(--bg) 70%) fixed;background-color:var(--bg);color:var(--cream);font:800 17px/1.5 Nunito,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+h1,h2,.chewy{font-family:Chewy,"Comic Sans MS",cursive;font-weight:400;margin:0}
+section{max-width:620px;margin:0 auto;padding:44px 20px;text-align:center}
+.hidden{display:none!important}
+input,button{font:inherit}
+input{width:100%;max-width:300px;padding:14px 16px;border-radius:14px;border:3px solid var(--gold);background:var(--cream);color:var(--ink);text-align:center;font-size:1.2rem}
+input:focus-visible,button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.btn{background:var(--pink);color:#fff;border:0;border-radius:14px;padding:14px 26px;font-size:1.1rem;cursor:pointer;box-shadow:0 5px 0 #b3225b;margin:12px 6px 0}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #b3225b}
+.btn.alt{background:var(--mint);color:var(--ink);box-shadow:0 5px 0 #17996f}
+.shake{animation:shake .4s}
+@keyframes shake{20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+#gate{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#gate h1{font-size:2.6rem;color:var(--gold)}
+.crown{font-size:4.5rem;display:inline-block;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(6deg)}}
+#hint{min-height:1.6em;color:var(--pink);margin-top:14px}
+.hero h1{font-size:clamp(3rem,16vw,5.5rem);color:var(--gold);line-height:1;text-shadow:4px 4px 0 var(--pink)}
+.hero p{margin:10px 0 0;font-size:1.15rem}
+h2{font-size:2rem;color:var(--mint);margin-bottom:14px}
+#roast{font-size:clamp(2rem,9vw,3rem);color:var(--gold);margin-top:18px;min-height:1.2em}
+.gift{width:170px;height:170px;margin:20px auto 0;position:relative;cursor:pointer;background:none;border:0;padding:0}
+.gift .lid{position:absolute;top:0;left:-8px;right:-8px;height:50px;background:var(--pink);border-radius:10px;transition:transform .6s;z-index:2}
+.gift .box{position:absolute;top:44px;bottom:0;left:0;right:0;background:#e2327a;border-radius:0 0 12px 12px}
+.gift .rib{position:absolute;top:0;bottom:0;left:50%;width:30px;margin-left:-15px;background:var(--gold);z-index:3}
+.gift .lid .rib{height:100%}
+.gift.open .lid{transform:translate(40px,-70px) rotate(24deg)}
+.hb{font-size:clamp(2rem,10vw,3.2rem);color:var(--gold)}
+#stickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:22px}
+.st{background:var(--cream);color:var(--ink);border-radius:18px;padding:14px 8px;animation:pop .5s backwards}
+.st .e{font-size:3.4rem;line-height:1.1}
+.st img{max-width:100%;max-height:110px}
+@keyframes pop{0%{transform:scale(0) rotate(-20deg)}70%{transform:scale(1.15)}}
+.wish{background:var(--cream);color:var(--ink);border-radius:18px;padding:16px 18px;margin:12px 0;text-align:left;box-shadow:6px 6px 0 var(--pink)}
+.wish:nth-child(even){box-shadow:6px 6px 0 var(--mint)}
+.cake{font-size:5rem;position:relative;display:inline-block}
+.flame{position:absolute;top:-6px;left:50%;transform:translateX(-50%);font-size:2.2rem;animation:fl .3s infinite alternate}
+@keyframes fl{to{transform:translateX(-50%) scale(1.15) rotate(5deg)}}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:50}
+#musicBtn{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;width:52px;height:52px;border-radius:50%;border:3px solid var(--gold);background:var(--pink);font-size:1.5rem;cursor:pointer}
+footer{padding:30px 20px 50px;text-align:center;opacity:.8}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

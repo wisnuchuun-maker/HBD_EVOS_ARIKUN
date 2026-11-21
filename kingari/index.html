@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ultah KING ARI 👑</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<!-- Musik: taruh file lagu bernama musik.mp3 di folder yang sama -->
+<audio id="bgm" src="musik.mp3" loop preload="auto"></audio>
+<button id="musicBtn" class="hidden" aria-label="Putar atau jeda musik">🔊</button>
+
+<div id="gate">
+  <div class="crown">👑</div>
+  <h1>Area Khusus Raja</h1>
+  <p>Masukkan sandi dulu, Yang Mulia.</p>
+  <input id="pw" type="password" placeholder="Sandi rahasia" autocomplete="off" aria-label="Sandi">
+  <div><button class="btn" id="pwBtn">Buka Gerbang</button></div>
+  <div id="hint" role="status"></div>
+</div>
+
+<main id="main" class="hidden">
+  <section class="hero">
+    <div class="crown">👑</div>
+    <h1>KING ARI</h1>
+    <p>Hari ini yang punya dunia cuma satu orang. Minggir semua.</p>
+  </section>
+
+  <section>
+    <h2>Sebelum lanjut, isi dulu</h2>
+    <label for="age">Umur kamu berapa sekarang?</label><br><br>
+    <input id="age" type="number" min="0" max="999" inputmode="numeric" placeholder="Tulis umurmu">
+    <div><button class="btn alt" id="ageBtn">Submit</button></div>
+    <div id="roast" class="chewy" role="status"></div>
+  </section>
+
+  <section>
+    <div class="hb chewy">Happy Birthday!</div>
+    <p>Ada kotak hadiah buat kamu. Ayo dibuka.</p>
+    <button class="gift" id="gift" aria-label="Buka kotak hadiah">
+      <span class="lid"><span class="rib"></span></span>
+      <span class="box"><span class="rib"></span></span>
+    </button>
+    <div id="stickers"></div>
+  </section>
+
+  <section>
+    <h2>Ucapan Buat KING ARI</h2>
+    <div class="wish">HBD KING sehat selalu, panjang umur, dilancarkan rezekinya</div>
+    <div class="wish">Moga jadi pribadi yg lebih josjis</div>
+    <div class="wish">Cukimay</div>
+    <div class="wish">Semoga apa yg diharapkan akan terkabul, tetep menyerah dan pantang semangat</div>
+    <div class="wish">Nah Amonto gen</div>
+  </section>
+
+  <section>
+    <h2>Tiup Lilin Dulu</h2>
+    <div class="cake">🎂<span class="flame" id="flame">🔥</span></div>
+    <div><button class="btn" id="blow">Tiup Lilin</button><button class="btn alt" id="boom">Hujan Confetti</button></div>
+    <p id="blowMsg" role="status"></p>
+  </section>
+
+  <footer>Dibuat dengan penuh cinta dan sedikit kejahilan, untuk KING ARI 👑</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
